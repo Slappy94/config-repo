@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: myRoute
+          uri: http://localhost:8080   # Puedes especificar la URI del servicio de destino
+          predicates:
+            - Path=/api/**            # Define el prefijo que activará esta ruta
